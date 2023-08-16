@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Inter";
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: crimson;
+}
+.red {
+  color: crimson !important;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  font-size: 50px;
+}
+nav ul {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.menu-mobile {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.nav-item a {
+  color: #fff;
+}
+.list-nav {
+  display: none;
+}
+
+/* HERO */
+
+.hero {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.container-itens {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem 4rem;
+  border: 1px solid crimson;
+  gap: 1rem;
+}
+
+/* FIM HERO */
+
+/* IMOVEIS */
+.imoveis {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-items-imoveis {
+  border: 1px solid crimson;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 400px;
+  min-width: 300px;
+}
+.card-items-imoveis img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 2;
+  border: 1px solid crimson;
+  max-width: 400px;
+}
+.card-imoveis {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.item-1,
+.item-2 {
+  display: flex;
+  gap: 5rem;
+}
+/* FIM IMOVEIS */
+
+.contato {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.telefone {
+  font-size: 20px !important;
+}
+.div-telefone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  left: 9px;
+  top: 4px;
+}
+.footer {
+  display: flex;
+  background-color: #000;
+  justify-content: center;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: -150px;
+  width: 100vw;
+}
+.footer p {
+  color: #fff;
+  height: 50px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*DESKTOP*/
+
+@media (min-width: 900px) {
+  .card-imoveis {
+    width: 80vw;
+    flex-direction: row;
+  }
+  body {
+    width: calc(100vw - 40px) !important;
+  }
+
+  .hero > h1,
+  p {
+    margin: 0 auto;
+  }
+  .imoveis > h2 {
+    margin: 0 auto;
+  }
+
+  .contato h2,
+  p {
+    margin: 0 auto;
+  }
+
+  .tel-none {
+    display: none;
+  }
+
+  .list-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .item-nav-1 a:hover {
+    color: #000 !important;
+  }
+  .item-nav-2 a:hover {
+    color: #000 !important;
+  }
+  .item-nav-3 a:hover {
+    color: #000;
+  }
+  .logo a:hover {
+    cursor: pointer;
+  }
+  .nav-item a {
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+/* FIM DESKTOP*/
+
+/* MENU HAMBURGUER  */
+@media (max-width: 899px) {
+  .list-nav {
+    display: flex;
+  }
+  
+  .list-nav li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  
+  .list-nav {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: -10px;
+    width: 100vw;
+    height: 90vh;
+    background: crimson;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .list-nav li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block !important;
+  }
+  
+  .list-nav.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  } 
+}
+/* MENU HAMBURGUER  */
+
+
+

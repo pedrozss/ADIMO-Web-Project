@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="../contato.css" />
+    <title>Sobre - ADIMO</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html">
+          <img
+            src="../img/edificios-comerciais.png"
+            style="width: 4rem"
+            alt="logoCasa"
+          />
+        </a>
+        <p style="color:white;">ADIMO</p>
+      </div>
+      <div class="menu-mobile">
+        <nav>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="list-nav">
+            <li class="nav-item item-nav-1">
+              <a href="./sobre.html">Sobre nós</a>
+            </li>
+            <li class="nav-item item-nav-2">
+              <a style="color: yellow; border-bottom: 1px solid yellow;" href="#">Contato</a>
+            </li>
+            <li class="nav-item item-nav-3">
+              <a href="./servicos.html">Serviços</a>
+            </li>
+            <li class="nav-item item-nav-3">
+              <a href="./avaliacoes.html">Avaliações</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <h1 class="h1-title red">Suas informações</h1>
+      <form class="form">
+        <div class="field">
+          <label class="red" for="fname">Primeiro nome</label>
+          <input type="text" id="fname" name="fname" />
+        </div>
+        <div class="field">
+          <label class="red" for="lname">Último nome</label>
+          <input type="text" id="lname" name="lname" />
+        </div>
+        <div class="field">
+          <label class="red" for="lemail">Email</label>
+          <input type="text" id="lemail" name="lemail" />
+        </div>
+        <div class="field">
+          <label class="red" for="ltelefone">Telefone</label>
+          <input type="number" id="ltelefone" name="ltelefone" />
+        </div>
+        <div class="field">
+          <label class="red" for="chooiseAp"
+            >Sobre qual apartamento você quer saber mais?</label
+          >
+          <select name="select">
+            <option value="ap1" selected>Rua Itacema</option>
+            <option value="ap2">Rua Itacema</option>
+            <option value="ap3">Rua Itacema</option>
+            <option value="ap4">Rua Itacema</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="red" for="description">Tem alguma dúvida ?</label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Digite sua dúvida"
+          ></textarea>
+        </div>
+        <div id="dialogoverlay"></div>
+          <div id="dialogbox">
+            <div>
+              <div id="dialogboxhead"></div>
+              <div id="dialogboxbody"></div>
+              <div id="dialogboxfoot"></div>
+            </div>
+          </div>
+        <button class="red" type="button" onclick="Alert.render('Em breve entraremos em contato!'),buttonPreventDefault()">ENVIAR!</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <p>©2022 Copyright - Imobiliária Adimo Imóveis</p>
+    </footer>
+    <script src="../index.js"></script>
+  </body>
+</html>
